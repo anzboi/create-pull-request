@@ -1113,7 +1113,7 @@ const plugin_paginate_rest_1 = __nccwpck_require__(4193);
 const plugin_rest_endpoint_methods_1 = __nccwpck_require__(3044);
 const https_proxy_agent_1 = __nccwpck_require__(7219);
 let agent = {};
-var proxy = process.env.https_proxy || process.env.https_proxy;
+const proxy = process.env.https_proxy || process.env.HTTPS_PROXY;
 if (proxy) {
     agent = new https_proxy_agent_1.HttpsProxyAgent(proxy);
 }
